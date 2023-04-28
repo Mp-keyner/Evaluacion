@@ -24,12 +24,13 @@ nav {
 }
 
 .menu ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  font-size: 24px;
 }
 
 .menu li {
-   margin: 0 20px;
+  margin: 0 20px;
 }
 
 .menu li a {
@@ -42,27 +43,71 @@ nav {
 }
 
 .content {
-    display: none;
+  display: none;
 }
 
 .container {
-    background: #333;
-    display: flex;
-    width: 100hv;
+  background: #333;
+  display: flex;
+  width: 100hv;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .izquierda {
-    /* background-color: #f5c400; */
-    background-color: #fff;
-    width: 50%;
-    padding: 4pc;
+  background-color: #fff;
+  width: 50%;
+  padding: 4pc;
+  padding-top: 10pc;
 }
+
 .derecha {
-    background: #fff;
-    width: 50%;
+  background: #fff;
+  width: 50%;
 }
-.til{
-  font-family: fantasy;
+
+.containerSecDev {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 3pc 0;
 }
+
+.containerDev {
+  text-align: center;
+  margin: 2pc;
+}
+
+.text {
+  margin-top: 1pc;
+  font-size: 18px;
+}
+
+.containerSer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerSer>h2 {
+  font-size: 3pc;
+  width: 50pc;
+  text-align: center;
+}
+
+.react {
+  width: 12pc;
+}
+
+.til {
+  font-family: 'Sigmar', cursive;
+  font-weight: unset;
+  font-size: 3pc;
+}
+
 
 @media only screen and (max-width: 768px) {
   .menu {
@@ -91,7 +136,7 @@ nav {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    height: calc(100vh - 80px); 
+    height: calc(100vh - 80px);
     background-color: #333;
     color: #fff;
     position: absolute;
@@ -103,42 +148,133 @@ nav {
     transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
   }
-  
+
   .nav-active.active {
     transform: translateX(0%);
   }
+
   .menu ul {
     display: flex;
     list-style: none;
     flex-direction: column;
     margin-bottom: 21pc;
-}
+  }
 
-.menu li {
+  .menu li {
     margin: 1pc 0;
     font-size: 10px;
-}
+  }
+
   .nav-active li a {
     font-size: 2em;
     text-decoration: none;
     color: #fff;
     margin: 20px;
   }
-  
+
   .nav-active li a:hover {
     color: #f5c400;
   }
-  
+
   .burger.active .line1 {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  
+
   .burger.active .line2 {
     opacity: 0;
   }
-  
+
   .burger.active .line3 {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-  
+
+}
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.containerLogin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15pc;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Estilos para pantallas grandes */
+
+@media only screen and (min-width: 768px) {
+
+  .login,
+  .register {
+    flex-basis: 50%;
+  }
+
+  .login {
+    padding-right: 20px;
+  }
+
+  .register {
+    padding-left: 20px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+
+@media only screen and (max-width: 767px) {
+
+  .login,
+  .register {
+    flex-basis: 100%;
+    padding: 0 20px;
+  }
+
+  .containerSecDev {
+    grid-template-columns: 1fr;
+  }
+
+  .til {
+    font-size: 2pc;
+  }
+
+  .containerSer>h2 {
+    width: 21pc;
+  }
 }

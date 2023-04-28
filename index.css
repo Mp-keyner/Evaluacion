@@ -15,12 +15,28 @@ nav {
   height: 80px;
   padding: 0 50px;
 }
+.nav-oscuro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #000000;
+  height: 80px;
+  padding: 0 50px;
+}
+.containerLogin-oscuro{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15pc;
+    background: #333;
+}
 
 .logo a {
   font-size: 2em;
   font-weight: bold;
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .menu ul {
@@ -35,7 +51,7 @@ nav {
 
 .menu li a {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .burger {
@@ -47,6 +63,11 @@ nav {
 }
 
 .container {
+  /* background: #333; */
+  display: flex;
+  width: 100hv;
+}
+.container-oscuro {
   background: #333;
   display: flex;
   width: 100hv;
@@ -59,14 +80,14 @@ a {
 
 
 .izquierda {
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 50%;
   padding: 4pc;
   padding-top: 10pc;
 }
 
 .derecha {
-  background: #fff;
+  /* background: #fff; */
   width: 50%;
 }
 
@@ -91,6 +112,14 @@ a {
   flex-direction: column;
   align-items: center;
 }
+
+.containerSer-oscuro {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .containerSer>h2 {
   font-size: 3pc;
